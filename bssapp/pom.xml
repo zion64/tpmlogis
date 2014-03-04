@@ -36,7 +36,7 @@
 
 		<!-- Define the version of the JBoss BOMs we want to import to specify tested stacks. -->
 		<version.jboss.bom.wfk>2.4.0-redhat-1</version.jboss.bom.wfk>
-		<version.dom4j>1.6.1-redhat-5</version.dom4j>
+		<version.dom4j>1.6.1-jboss</version.dom4j>
 		<version.jboss.bom.eap>1.0.7.Final</version.jboss.bom.eap>
 
 		<!-- maven-compiler-plugin -->
@@ -84,6 +84,7 @@
             	<groupId>dom4j</groupId>
             	<artifactId>dom4j</artifactId>
             	<version>${version.dom4j}</version>
+            	<scope>provided</scope>
             </dependency>
 
             <dependency>
@@ -92,7 +93,7 @@
                 <version>${version.standard.taglibs}</version>
             </dependency>
 
-            <dependency>
+            <dependency>   
                 <groupId>commons-logging</groupId>
                 <artifactId>commons-logging</artifactId>
                 <version>${version.commons.logging}</version>
@@ -291,15 +292,14 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-        	<groupId>com.unionia.jdbc</groupId>
-        	<artifactId>postgresql</artifactId>
-        	<version>9.3-1101.jdbc41</version>
-        	<scope>provided</scope>
-        </dependency>
-        <dependency>
         	<groupId>org.hibernate</groupId>
         	<artifactId>hibernate-tools</artifactId>
         	<version>4.0.0-CR1</version>
+        </dependency>
+        <dependency>
+        	<groupId>unionia.jdbc-driver</groupId>
+        	<artifactId>postgresql</artifactId>
+        	<version>9.3-1101.jdbc41</version>
         </dependency>
     </dependencies>
 

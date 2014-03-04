@@ -1,6 +1,6 @@
 package com.tpmlogis.bssapp.model;
 
-// Generated 2014. 3. 4 ���� 4:41:59 by Hibernate Tools 4.0.0
+// Generated 2014. 3. 4 ?? 10:20:32 by Hibernate Tools 4.0.0
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,48 +10,63 @@ import java.util.Set;
  */
 public class Employees implements java.io.Serializable {
 
-	private int employeeNumber;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2838468200575557423L;
+	private int employeenumber;
+	private Integer version;
 	private Offices offices;
-	private String lastName;
-	private String firstName;
+	private Employees employees;
+	private String lastname;
+	private String firstname;
 	private String extension;
 	private String email;
-	private Integer reportsTo;
-	private String jobTitle;
+	private String jobtitle;
+	private Set employeeses = new HashSet(0);
 	private Set customerses = new HashSet(0);
 
 	public Employees() {
 	}
 
-	public Employees(int employeeNumber, Offices offices, String lastName, String firstName, String extension, String email, String jobTitle) {
-		this.employeeNumber = employeeNumber;
+	public Employees(int employeenumber, Offices offices, String lastname, String firstname, String extension, String email, String jobtitle) {
+		this.employeenumber = employeenumber;
 		this.offices = offices;
-		this.lastName = lastName;
-		this.firstName = firstName;
+		this.lastname = lastname;
+		this.firstname = firstname;
 		this.extension = extension;
 		this.email = email;
-		this.jobTitle = jobTitle;
+		this.jobtitle = jobtitle;
 	}
 
-	public Employees(int employeeNumber, Offices offices, String lastName, String firstName, String extension, String email,
-			Integer reportsTo, String jobTitle, Set customerses) {
-		this.employeeNumber = employeeNumber;
+	public Employees(int employeenumber, Offices offices, Employees employees, String lastname, String firstname, String extension,
+			String email, String jobtitle, Set employeeses, Set customerses) {
+		this.employeenumber = employeenumber;
 		this.offices = offices;
-		this.lastName = lastName;
-		this.firstName = firstName;
+		this.employees = employees;
+		this.lastname = lastname;
+		this.firstname = firstname;
 		this.extension = extension;
 		this.email = email;
-		this.reportsTo = reportsTo;
-		this.jobTitle = jobTitle;
+		this.jobtitle = jobtitle;
+		this.employeeses = employeeses;
 		this.customerses = customerses;
 	}
 
-	public int getEmployeeNumber() {
-		return this.employeeNumber;
+	public int getEmployeenumber() {
+		return this.employeenumber;
 	}
 
-	public void setEmployeeNumber(int employeeNumber) {
-		this.employeeNumber = employeeNumber;
+	public void setEmployeenumber(int employeenumber) {
+		this.employeenumber = employeenumber;
+	}
+
+	public Integer getVersion() {
+		return this.version;
+	}
+
+	public void setVersion(Integer version) {
+		this.version = version;
 	}
 
 	public Offices getOffices() {
@@ -62,20 +77,28 @@ public class Employees implements java.io.Serializable {
 		this.offices = offices;
 	}
 
-	public String getLastName() {
-		return this.lastName;
+	public Employees getEmployees() {
+		return this.employees;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setEmployees(Employees employees) {
+		this.employees = employees;
 	}
 
-	public String getFirstName() {
-		return this.firstName;
+	public String getLastname() {
+		return this.lastname;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
+	}
+
+	public String getFirstname() {
+		return this.firstname;
+	}
+
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
 
 	public String getExtension() {
@@ -94,20 +117,20 @@ public class Employees implements java.io.Serializable {
 		this.email = email;
 	}
 
-	public Integer getReportsTo() {
-		return this.reportsTo;
+	public String getJobtitle() {
+		return this.jobtitle;
 	}
 
-	public void setReportsTo(Integer reportsTo) {
-		this.reportsTo = reportsTo;
+	public void setJobtitle(String jobtitle) {
+		this.jobtitle = jobtitle;
 	}
 
-	public String getJobTitle() {
-		return this.jobTitle;
+	public Set getEmployeeses() {
+		return this.employeeses;
 	}
 
-	public void setJobTitle(String jobTitle) {
-		this.jobTitle = jobTitle;
+	public void setEmployeeses(Set employeeses) {
+		this.employeeses = employeeses;
 	}
 
 	public Set getCustomerses() {

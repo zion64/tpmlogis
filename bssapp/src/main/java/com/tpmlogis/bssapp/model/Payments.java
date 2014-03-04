@@ -1,6 +1,6 @@
 package com.tpmlogis.bssapp.model;
 
-// Generated 2014. 3. 4 ���� 4:41:59 by Hibernate Tools 4.0.0
+// Generated 2014. 3. 4 ?? 10:20:32 by Hibernate Tools 4.0.0
 
 import java.util.Date;
 
@@ -9,18 +9,23 @@ import java.util.Date;
  */
 public class Payments implements java.io.Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 5710106513949255782L;
 	private PaymentsId id;
+	private Integer version;
 	private Customers customers;
-	private Date paymentDate;
+	private Date paymentdate;
 	private double amount;
 
 	public Payments() {
 	}
 
-	public Payments(PaymentsId id, Customers customers, Date paymentDate, double amount) {
+	public Payments(PaymentsId id, Customers customers, Date paymentdate, double amount) {
 		this.id = id;
 		this.customers = customers;
-		this.paymentDate = paymentDate;
+		this.paymentdate = paymentdate;
 		this.amount = amount;
 	}
 
@@ -32,6 +37,14 @@ public class Payments implements java.io.Serializable {
 		this.id = id;
 	}
 
+	public Integer getVersion() {
+		return this.version;
+	}
+
+	public void setVersion(Integer version) {
+		this.version = version;
+	}
+
 	public Customers getCustomers() {
 		return this.customers;
 	}
@@ -40,12 +53,12 @@ public class Payments implements java.io.Serializable {
 		this.customers = customers;
 	}
 
-	public Date getPaymentDate() {
-		return this.paymentDate;
+	public Date getPaymentdate() {
+		return this.paymentdate;
 	}
 
-	public void setPaymentDate(Date paymentDate) {
-		this.paymentDate = paymentDate;
+	public void setPaymentdate(Date paymentdate) {
+		this.paymentdate = paymentdate;
 	}
 
 	public double getAmount() {

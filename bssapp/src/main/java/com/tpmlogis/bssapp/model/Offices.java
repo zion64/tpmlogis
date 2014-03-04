@@ -1,6 +1,6 @@
 package com.tpmlogis.bssapp.model;
 
-// Generated 2014. 3. 4 ���� 4:41:59 by Hibernate Tools 4.0.0
+// Generated 2014. 3. 4 ?? 10:20:32 by Hibernate Tools 4.0.0
 
 import java.util.HashSet;
 import java.util.Set;
@@ -13,51 +13,60 @@ public class Offices implements java.io.Serializable {
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = -8079410065055248739L;
-	private String officeCode;
+	private static final long serialVersionUID = -7606862130874808328L;
+	private String officecode;
+	private Integer version;
 	private String city;
 	private String phone;
-	private String addressLine1;
-	private String addressLine2;
+	private String addressline1;
+	private String addressline2;
 	private String state;
 	private String country;
-	private String postalCode;
+	private String postalcode;
 	private String territory;
 	private Set employeeses = new HashSet(0);
 
 	public Offices() {
 	}
 
-	public Offices(String officeCode, String city, String phone, String addressLine1, String country, String postalCode, String territory) {
-		this.officeCode = officeCode;
+	public Offices(String officecode, String city, String phone, String addressline1, String country, String postalcode, String territory) {
+		this.officecode = officecode;
 		this.city = city;
 		this.phone = phone;
-		this.addressLine1 = addressLine1;
+		this.addressline1 = addressline1;
 		this.country = country;
-		this.postalCode = postalCode;
+		this.postalcode = postalcode;
 		this.territory = territory;
 	}
 
-	public Offices(String officeCode, String city, String phone, String addressLine1, String addressLine2, String state, String country,
-			String postalCode, String territory, Set employeeses) {
-		this.officeCode = officeCode;
+	public Offices(String officecode, String city, String phone, String addressline1, String addressline2, String state, String country,
+			String postalcode, String territory, Set employeeses) {
+		this.officecode = officecode;
 		this.city = city;
 		this.phone = phone;
-		this.addressLine1 = addressLine1;
-		this.addressLine2 = addressLine2;
+		this.addressline1 = addressline1;
+		this.addressline2 = addressline2;
 		this.state = state;
 		this.country = country;
-		this.postalCode = postalCode;
+		this.postalcode = postalcode;
 		this.territory = territory;
 		this.employeeses = employeeses;
 	}
 
-	public String getOfficeCode() {
-		return this.officeCode;
+	public String getOfficecode() {
+		return this.officecode;
 	}
 
-	public void setOfficeCode(String officeCode) {
-		this.officeCode = officeCode;
+	public void setOfficecode(String officecode) {
+		this.officecode = officecode;
+	}
+
+	public Integer getVersion() {
+		return this.version;
+	}
+
+	public void setVersion(Integer version) {
+		this.version = version;
 	}
 
 	public String getCity() {
@@ -76,20 +85,20 @@ public class Offices implements java.io.Serializable {
 		this.phone = phone;
 	}
 
-	public String getAddressLine1() {
-		return this.addressLine1;
+	public String getAddressline1() {
+		return this.addressline1;
 	}
 
-	public void setAddressLine1(String addressLine1) {
-		this.addressLine1 = addressLine1;
+	public void setAddressline1(String addressline1) {
+		this.addressline1 = addressline1;
 	}
 
-	public String getAddressLine2() {
-		return this.addressLine2;
+	public String getAddressline2() {
+		return this.addressline2;
 	}
 
-	public void setAddressLine2(String addressLine2) {
-		this.addressLine2 = addressLine2;
+	public void setAddressline2(String addressline2) {
+		this.addressline2 = addressline2;
 	}
 
 	public String getState() {
@@ -108,12 +117,12 @@ public class Offices implements java.io.Serializable {
 		this.country = country;
 	}
 
-	public String getPostalCode() {
-		return this.postalCode;
+	public String getPostalcode() {
+		return this.postalcode;
 	}
 
-	public void setPostalCode(String postalCode) {
-		this.postalCode = postalCode;
+	public void setPostalcode(String postalcode) {
+		this.postalcode = postalcode;
 	}
 
 	public String getTerritory() {

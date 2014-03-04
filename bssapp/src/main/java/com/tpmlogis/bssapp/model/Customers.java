@@ -1,6 +1,6 @@
 package com.tpmlogis.bssapp.model;
 
-// Generated 2014. 3. 4 ���� 4:41:59 by Hibernate Tools 4.0.0
+// Generated 2014. 3. 4 ?? 10:20:32 by Hibernate Tools 4.0.0
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,63 +10,76 @@ import java.util.Set;
  */
 public class Customers implements java.io.Serializable {
 
-	private int customerNumber;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -9059460352725201626L;
+	private int customernumber;
+	private Integer version;
 	private Employees employees;
-	private String customerName;
-	private String contactLastName;
-	private String contactFirstName;
+	private String customername;
+	private String contactlastname;
+	private String contactfirstname;
 	private String phone;
-	private String addressLine1;
-	private String addressLine2;
+	private String addressline1;
+	private String addressline2;
 	private String city;
 	private String state;
-	private String postalCode;
+	private String postalcode;
 	private String country;
-	private Double creditLimit;
+	private Double creditlimit;
 	private Set orderses = new HashSet(0);
 	private Set paymentses = new HashSet(0);
 
 	public Customers() {
 	}
 
-	public Customers(int customerNumber, String customerName, String contactLastName, String contactFirstName, String phone,
-			String addressLine1, String city, String country) {
-		this.customerNumber = customerNumber;
-		this.customerName = customerName;
-		this.contactLastName = contactLastName;
-		this.contactFirstName = contactFirstName;
+	public Customers(int customernumber, String customername, String contactlastname, String contactfirstname, String phone,
+			String addressline1, String city, String country) {
+		this.customernumber = customernumber;
+		this.customername = customername;
+		this.contactlastname = contactlastname;
+		this.contactfirstname = contactfirstname;
 		this.phone = phone;
-		this.addressLine1 = addressLine1;
+		this.addressline1 = addressline1;
 		this.city = city;
 		this.country = country;
 	}
 
-	public Customers(int customerNumber, Employees employees, String customerName, String contactLastName, String contactFirstName,
-			String phone, String addressLine1, String addressLine2, String city, String state, String postalCode, String country,
-			Double creditLimit, Set orderses, Set paymentses) {
-		this.customerNumber = customerNumber;
+	public Customers(int customernumber, Employees employees, String customername, String contactlastname, String contactfirstname,
+			String phone, String addressline1, String addressline2, String city, String state, String postalcode, String country,
+			Double creditlimit, Set orderses, Set paymentses) {
+		this.customernumber = customernumber;
 		this.employees = employees;
-		this.customerName = customerName;
-		this.contactLastName = contactLastName;
-		this.contactFirstName = contactFirstName;
+		this.customername = customername;
+		this.contactlastname = contactlastname;
+		this.contactfirstname = contactfirstname;
 		this.phone = phone;
-		this.addressLine1 = addressLine1;
-		this.addressLine2 = addressLine2;
+		this.addressline1 = addressline1;
+		this.addressline2 = addressline2;
 		this.city = city;
 		this.state = state;
-		this.postalCode = postalCode;
+		this.postalcode = postalcode;
 		this.country = country;
-		this.creditLimit = creditLimit;
+		this.creditlimit = creditlimit;
 		this.orderses = orderses;
 		this.paymentses = paymentses;
 	}
 
-	public int getCustomerNumber() {
-		return this.customerNumber;
+	public int getCustomernumber() {
+		return this.customernumber;
 	}
 
-	public void setCustomerNumber(int customerNumber) {
-		this.customerNumber = customerNumber;
+	public void setCustomernumber(int customernumber) {
+		this.customernumber = customernumber;
+	}
+
+	public Integer getVersion() {
+		return this.version;
+	}
+
+	public void setVersion(Integer version) {
+		this.version = version;
 	}
 
 	public Employees getEmployees() {
@@ -77,28 +90,28 @@ public class Customers implements java.io.Serializable {
 		this.employees = employees;
 	}
 
-	public String getCustomerName() {
-		return this.customerName;
+	public String getCustomername() {
+		return this.customername;
 	}
 
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
+	public void setCustomername(String customername) {
+		this.customername = customername;
 	}
 
-	public String getContactLastName() {
-		return this.contactLastName;
+	public String getContactlastname() {
+		return this.contactlastname;
 	}
 
-	public void setContactLastName(String contactLastName) {
-		this.contactLastName = contactLastName;
+	public void setContactlastname(String contactlastname) {
+		this.contactlastname = contactlastname;
 	}
 
-	public String getContactFirstName() {
-		return this.contactFirstName;
+	public String getContactfirstname() {
+		return this.contactfirstname;
 	}
 
-	public void setContactFirstName(String contactFirstName) {
-		this.contactFirstName = contactFirstName;
+	public void setContactfirstname(String contactfirstname) {
+		this.contactfirstname = contactfirstname;
 	}
 
 	public String getPhone() {
@@ -109,20 +122,20 @@ public class Customers implements java.io.Serializable {
 		this.phone = phone;
 	}
 
-	public String getAddressLine1() {
-		return this.addressLine1;
+	public String getAddressline1() {
+		return this.addressline1;
 	}
 
-	public void setAddressLine1(String addressLine1) {
-		this.addressLine1 = addressLine1;
+	public void setAddressline1(String addressline1) {
+		this.addressline1 = addressline1;
 	}
 
-	public String getAddressLine2() {
-		return this.addressLine2;
+	public String getAddressline2() {
+		return this.addressline2;
 	}
 
-	public void setAddressLine2(String addressLine2) {
-		this.addressLine2 = addressLine2;
+	public void setAddressline2(String addressline2) {
+		this.addressline2 = addressline2;
 	}
 
 	public String getCity() {
@@ -141,12 +154,12 @@ public class Customers implements java.io.Serializable {
 		this.state = state;
 	}
 
-	public String getPostalCode() {
-		return this.postalCode;
+	public String getPostalcode() {
+		return this.postalcode;
 	}
 
-	public void setPostalCode(String postalCode) {
-		this.postalCode = postalCode;
+	public void setPostalcode(String postalcode) {
+		this.postalcode = postalcode;
 	}
 
 	public String getCountry() {
@@ -157,12 +170,12 @@ public class Customers implements java.io.Serializable {
 		this.country = country;
 	}
 
-	public Double getCreditLimit() {
-		return this.creditLimit;
+	public Double getCreditlimit() {
+		return this.creditlimit;
 	}
 
-	public void setCreditLimit(Double creditLimit) {
-		this.creditLimit = creditLimit;
+	public void setCreditlimit(Double creditlimit) {
+		this.creditlimit = creditlimit;
 	}
 
 	public Set getOrderses() {

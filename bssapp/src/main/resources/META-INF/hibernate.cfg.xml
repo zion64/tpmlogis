@@ -15,6 +15,9 @@
   <property name="hibernate.query.startup_check">true</property>
   <property name="hibernate.query.jpaql_strict_compliance">true</property>
   <property name="hibernate.generate_statistics">true</property>
-<!--   <property name="hibernatetool.metadatadialect">com.tmplogis.bssapp.util.PostgreSQLMetaDialect</property> -->
+  <!-- Enable Hibernate's current session context -->
+  <property name="hibernate.current_session_context_class">org.hibernate.context.ManagedSessionContext</property>
+  <property name="hibernate.cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+  <!--   <property name="hibernatetool.metadatadialect">com.tmplogis.bssapp.util.PostgreSQLMetaDialect</property> -->
  </session-factory>
 </hibernate-configuration>

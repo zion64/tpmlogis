@@ -1,6 +1,6 @@
 package com.tpmlogis.bssapp.model;
 
-// Generated 2014. 3. 4 ���� 4:41:59 by Hibernate Tools 4.0.0
+// Generated 2014. 3. 4 ?? 10:20:32 by Hibernate Tools 4.0.0
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,49 +10,62 @@ import java.util.Set;
  */
 public class Productlines implements java.io.Serializable {
 
-	private String productLine;
-	private String textDescription;
-	private String htmlDescription;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6319459525535599377L;
+	private String productline;
+	private Integer version;
+	private String textdescription;
+	private String htmldescription;
 	private byte[] image;
 	private Set productses = new HashSet(0);
 
 	public Productlines() {
 	}
 
-	public Productlines(String productLine) {
-		this.productLine = productLine;
+	public Productlines(String productline) {
+		this.productline = productline;
 	}
 
-	public Productlines(String productLine, String textDescription, String htmlDescription, byte[] image, Set productses) {
-		this.productLine = productLine;
-		this.textDescription = textDescription;
-		this.htmlDescription = htmlDescription;
+	public Productlines(String productline, String textdescription, String htmldescription, byte[] image, Set productses) {
+		this.productline = productline;
+		this.textdescription = textdescription;
+		this.htmldescription = htmldescription;
 		this.image = image;
 		this.productses = productses;
 	}
 
-	public String getProductLine() {
-		return this.productLine;
+	public String getProductline() {
+		return this.productline;
 	}
 
-	public void setProductLine(String productLine) {
-		this.productLine = productLine;
+	public void setProductline(String productline) {
+		this.productline = productline;
 	}
 
-	public String getTextDescription() {
-		return this.textDescription;
+	public Integer getVersion() {
+		return this.version;
 	}
 
-	public void setTextDescription(String textDescription) {
-		this.textDescription = textDescription;
+	public void setVersion(Integer version) {
+		this.version = version;
 	}
 
-	public String getHtmlDescription() {
-		return this.htmlDescription;
+	public String getTextdescription() {
+		return this.textdescription;
 	}
 
-	public void setHtmlDescription(String htmlDescription) {
-		this.htmlDescription = htmlDescription;
+	public void setTextdescription(String textdescription) {
+		this.textdescription = textdescription;
+	}
+
+	public String getHtmldescription() {
+		return this.htmldescription;
+	}
+
+	public void setHtmldescription(String htmldescription) {
+		this.htmldescription = htmldescription;
 	}
 
 	public byte[] getImage() {
