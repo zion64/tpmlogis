@@ -18,38 +18,22 @@ package com.tpmlogis.bssapp.controller;
 
 import java.util.List;
 
-import com.tpmlogis.bssapp.data.MemberDao;
-import com.tpmlogis.bssapp.data.OfficesDao;
-import com.tpmlogis.bssapp.model.Member;
-import com.tpmlogis.bssapp.model.Offices;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.tpmlogis.bssapp.data.OfficesDao;
+import com.tpmlogis.bssapp.model.Offices;
+
 @Controller
-@RequestMapping("/rest/members")
-public class MemberRestController {
-    @Autowired
-    private MemberDao memberDao;
-    
+@RequestMapping("/rest/myoffices")
+public class OfficesRestController {
     @Autowired
     private OfficesDao officesDao;
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json;charset=utf-8")
-    public @ResponseBody List<Member> listAllMembers() {
-        return memberDao.findAllOrderedByName();
-    }
-
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json;charset=utf-8")
-    public @ResponseBody Member lookupMemberById(@PathVariable("id") Long id) {
-        return memberDao.findById(id);
-    }
-    
-    @RequestMapping(value = "/offices", method = RequestMethod.GET, produces = "application/json;charset=utf-8")
     public @ResponseBody List<Offices> listAllOffices() {
         return officesDao.findAllOrderedByOfficeCode();
     }
