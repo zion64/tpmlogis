@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014. 3. 4 ?? 10:28:26 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.tpmlogis.bssapp.model.Customers" table="customers" schema="public">
+        <id name="customernumber" type="int">
+            <column name="customernumber" />
+            <generator class="assigned" />
+        </id>
+        <version name="version" type="java.lang.Integer">
+            <column name="version" />
+        </version>
+        <many-to-one name="employees" class="com.tpmlogis.bssapp.model.Employees" fetch="select">
+            <column name="salesrepemployeenumber" />
+        </many-to-one>
+        <property name="customername" type="string">
+            <column name="customername" length="50" not-null="true" />
+        </property>
+        <property name="contactlastname" type="string">
+            <column name="contactlastname" length="50" not-null="true" />
+        </property>
+        <property name="contactfirstname" type="string">
+            <column name="contactfirstname" length="50" not-null="true" />
+        </property>
+        <property name="phone" type="string">
+            <column name="phone" length="50" not-null="true" />
+        </property>
+        <property name="addressline1" type="string">
+            <column name="addressline1" length="50" not-null="true" />
+        </property>
+        <property name="addressline2" type="string">
+            <column name="addressline2" length="50" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="50" not-null="true" />
+        </property>
+        <property name="state" type="string">
+            <column name="state" length="50" />
+        </property>
+        <property name="postalcode" type="string">
+            <column name="postalcode" length="15" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="50" not-null="true" />
+        </property>
+        <property name="creditlimit" type="java.lang.Double">
+            <column name="creditlimit" precision="17" scale="17" />
+        </property>
+        <set name="orderses" table="orders" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="customernumber" not-null="true" />
+            </key>
+            <one-to-many class="com.tpmlogis.bssapp.model.Orders" />
+        </set>
+        <set name="paymentses" table="payments" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="customernumber" not-null="true" />
+            </key>
+            <one-to-many class="com.tpmlogis.bssapp.model.Payments" />
+        </set>
+    </class>
+</hibernate-mapping>

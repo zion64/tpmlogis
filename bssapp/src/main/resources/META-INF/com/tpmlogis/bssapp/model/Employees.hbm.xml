@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014. 3. 4 ?? 10:28:26 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.tpmlogis.bssapp.model.Employees" table="employees" schema="public">
+        <id name="employeenumber" type="int">
+            <column name="employeenumber" />
+            <generator class="assigned" />
+        </id>
+        <version name="version" type="java.lang.Integer">
+            <column name="version" />
+        </version>
+        <many-to-one name="offices" class="com.tpmlogis.bssapp.model.Offices" fetch="select">
+            <column name="officecode" length="10" not-null="true" />
+        </many-to-one>
+        <many-to-one name="employees" class="com.tpmlogis.bssapp.model.Employees" fetch="select">
+            <column name="reportsto" />
+        </many-to-one>
+        <property name="lastname" type="string">
+            <column name="lastname" length="50" not-null="true" />
+        </property>
+        <property name="firstname" type="string">
+            <column name="firstname" length="50" not-null="true" />
+        </property>
+        <property name="extension" type="string">
+            <column name="extension" length="10" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="100" not-null="true" />
+        </property>
+        <property name="jobtitle" type="string">
+            <column name="jobtitle" length="50" not-null="true" />
+        </property>
+        <set name="employeeses" table="employees" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="reportsto" />
+            </key>
+            <one-to-many class="com.tpmlogis.bssapp.model.Employees" />
+        </set>
+        <set name="customerses" table="customers" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="salesrepemployeenumber" />
+            </key>
+            <one-to-many class="com.tpmlogis.bssapp.model.Customers" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -32,7 +32,7 @@ public class EmployeesDaoImpl implements EmployeesDao {
          * feature in JPA 2.0 criteria.select(member).orderBy(cb.asc(member.get(Member_.name)));
          */
 
-        criteria.select(employees).orderBy(cb.asc(employees.get("firstName")));
+        criteria.select(employees).orderBy(cb.asc(employees.get("firstname")));
         return em.createQuery(criteria).getResultList();
 	}
 

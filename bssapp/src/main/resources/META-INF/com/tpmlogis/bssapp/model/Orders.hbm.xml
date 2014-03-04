@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014. 3. 4 ?? 10:28:26 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.tpmlogis.bssapp.model.Orders" table="orders" schema="public">
+        <id name="ordernumber" type="int">
+            <column name="ordernumber" />
+            <generator class="assigned" />
+        </id>
+        <version name="version" type="java.lang.Integer">
+            <column name="version" />
+        </version>
+        <many-to-one name="customers" class="com.tpmlogis.bssapp.model.Customers" fetch="select">
+            <column name="customernumber" not-null="true" />
+        </many-to-one>
+        <property name="orderdate" type="date">
+            <column name="orderdate" length="13" not-null="true" />
+        </property>
+        <property name="requireddate" type="date">
+            <column name="requireddate" length="13" not-null="true" />
+        </property>
+        <property name="shippeddate" type="date">
+            <column name="shippeddate" length="13" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="15" not-null="true" />
+        </property>
+        <property name="comments" type="string">
+            <column name="comments" />
+        </property>
+    </class>
+</hibernate-mapping>
