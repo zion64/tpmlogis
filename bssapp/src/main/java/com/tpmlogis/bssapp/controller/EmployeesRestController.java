@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.tpmlogis.bssapp.data.EmployeesDao;
-import com.tpmlogis.bssapp.domain.Employees;
+import com.tpmlogis.bssapp.model.Employees;
 
 @Controller
 @RequestMapping("/rest/employees")

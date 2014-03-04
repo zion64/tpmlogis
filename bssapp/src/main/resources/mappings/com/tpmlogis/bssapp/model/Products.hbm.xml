@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2014. 3. 4 ???? 4:42:57 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="com.tpmlogis.bssapp.model.Products" table="products" schema="public">
+        <id name="productCode" type="string">
+            <column name="productCode" length="15" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="productlines" class="com.tpmlogis.bssapp.model.Productlines" fetch="select">
+            <column name="productLine" length="50" not-null="true" />
+        </many-to-one>
+        <property name="productName" type="string">
+            <column name="productName" length="70" not-null="true" />
+        </property>
+        <property name="productScale" type="string">
+            <column name="productScale" length="10" not-null="true" />
+        </property>
+        <property name="productVendor" type="string">
+            <column name="productVendor" length="50" not-null="true" />
+        </property>
+        <property name="productDescription" type="string">
+            <column name="productDescription" not-null="true" />
+        </property>
+        <property name="quantityInStock" type="short">
+            <column name="quantityInStock" not-null="true" />
+        </property>
+        <property name="buyPrice" type="double">
+            <column name="buyPrice" precision="17" scale="17" not-null="true" />
+        </property>
+        <property name="msrp" type="double">
+            <column name="MSRP" precision="17" scale="17" not-null="true" />
+        </property>
+        <property name="productlines_1" type="binary">
+            <column name="productlines" />
+        </property>
+        <set name="orderdetailses" table="orderdetails" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="productCode" length="15" not-null="true" />
+            </key>
+            <one-to-many class="com.tpmlogis.bssapp.model.Orderdetails" />
+        </set>
+    </class>
+</hibernate-mapping>

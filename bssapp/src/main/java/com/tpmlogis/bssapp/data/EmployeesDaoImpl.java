@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.tpmlogis.bssapp.domain.Employees;
+import com.tpmlogis.bssapp.model.Employees;
 import com.tpmlogis.bssapp.model.Member;
 
 @Repository

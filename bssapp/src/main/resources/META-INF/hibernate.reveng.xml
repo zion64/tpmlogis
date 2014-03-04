@@ -4,29 +4,10 @@
 <hibernate-reverse-engineering>
 	<table-filter match-schema="public" match-name="employees" />
 	<table-filter match-name="customers" match-schema="public"></table-filter>
-	<table schema="public" name="employees">
-		<column name="employeeNumber"></column>
-		<column name="lastName"></column>
-		<column name="firstName"></column>
-		<column name="extension"></column>
-		<column name="email"></column>
-		<column name="officeCode"></column>
-		<column name="reportsTo"></column>
-		<column name="jobTitle"></column>
-	</table>
-	<table schema="public" name="customers">
-		<column name="customerNumber"></column>
-		<column name="customerName"></column>
-		<column name="contactLastName"></column>
-		<column name="contactFirstName"></column>
-		<column name="phone"></column>
-		<column name="addressLine1"></column>
-		<column name="addressLine2"></column>
-		<column name="city"></column>
-		<column name="state"></column>
-		<column name="postalCode"></column>
-		<column name="country"></column>
-		<column name="salesRepEmployeeNumber"></column>
-		<column name="creditLimit"></column>
-	</table>
+	<table-filter match-name="offices" match-schema="public"></table-filter>
+	<table-filter match-name="orderdetails" match-schema="public"></table-filter>
+	<table-filter match-name="orders" match-schema="public"></table-filter>
+	<table-filter match-name="payments" match-schema="public"></table-filter>
+	<table-filter match-name="productlines" match-schema="public"></table-filter>
+	<table-filter match-name="products" match-schema="public"></table-filter>
 </hibernate-reverse-engineering>

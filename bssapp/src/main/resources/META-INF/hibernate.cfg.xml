@@ -10,9 +10,11 @@
   <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
   <property name="hibernate.connection.pool_size">5</property>
   <property name="hibernate.show_sql">true</property>
-  <property name="hibernate.format_sql">false</property>
+  <property name="hibernate.format_sql">true</property>
   <property name="hibernate.hbm2ddl.auto">update</property>
   <property name="hibernate.query.startup_check">true</property>
   <property name="hibernate.query.jpaql_strict_compliance">true</property>
+  <property name="hibernate.generate_statistics">true</property>
+<!--   <property name="hibernatetool.metadatadialect">com.tmplogis.bssapp.util.PostgreSQLMetaDialect</property> -->
  </session-factory>
 </hibernate-configuration>

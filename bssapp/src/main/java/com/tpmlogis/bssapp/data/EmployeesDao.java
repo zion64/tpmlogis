@@ -18,7 +18,7 @@ package com.tpmlogis.bssapp.data;
 
 import java.util.List;
 
-import com.tpmlogis.bssapp.domain.Employees;
+import com.tpmlogis.bssapp.model.Employees;
 
 public interface EmployeesDao {
     public List<Employees> findAllOrderedByName();
